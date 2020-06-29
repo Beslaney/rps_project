@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -11,9 +10,9 @@
 <body>
     <div class="title">Rock - Paper - Scissors</div>
     <div class="selections">
-        <button class="selection" data-selection="rock">✊</button>
-        <button class="selection" data-selection="paper">✋</button>
-        <button class="selection" data-selection="scissors">✌️</button>
+        <button class="selection" data-selection="rock"><img src="rock.svg" id="rock" alt="rock"></button>
+        <button class="selection" data-selection="paper"><img src="paper.svg" id="paper" alt="paper"></button>
+        <button class="selection" data-selection="scissors"><img src="scissors.svg" id="scissors" alt="scissors"></button>
     </div>
     <div class="restart"><button onClick="window.location.reload();">restart</button></div>
     <div class="results">
@@ -25,8 +24,6 @@
             Computer:
             <span class="result-score" data-computer-score>0</span>
         </div>
-        <!-- <div class="result-selection winner">✊</div>
-        <div class="result-selection">✌️</div> -->
     </div>
 </body>
 </html>

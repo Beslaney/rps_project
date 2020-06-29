@@ -2,20 +2,23 @@ const selectionButtons = document.querySelectorAll('[data-selection]')
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-your-score]')
+const rock = '<img src="rock.svg" id="rock" alt="rock">'
+const paper = '<img src="paper.svg" id="paper" alt="paper">'
+const scissors = '<img src="scissors.svg" id="scissors" alt="scissors">'
 const SELECTIONS = [
     {
     name: 'rock',
-    emoji: '✊',
+    emoji: rock,
     beats: 'scissors'
     },
     {
     name: 'paper',
-    emoji: '✋',
+    emoji: paper,
     beats: 'rock'
     },
     {
     name: 'scissors',
-    emoji: '✌️',
+    emoji: scissors,
     beats: 'paper'
     }
 ]
@@ -46,7 +49,7 @@ function incrementScore(scoreSpan) {
 
 function addSelectionResult(selection, winner) {
     const div = document.createElement('div')
-    div.innerText = selection.emoji
+    div.innerHTML = selection.emoji
     div.classList.add('result-selection')
     if (winner) div.classList.add('winner')
     finalColumn.after(div)

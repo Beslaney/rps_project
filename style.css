@@ -33,7 +33,6 @@ body {
 
 .restart>button:hover {
     transform: scale(1.1);
-    box-shadow: grey 5px 10px 10px;
 }
 
 .selections {
@@ -46,13 +45,19 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 5rem;
+    margin: .5rem;
+}
+
+.selection>img {
+    background: none;
+    border: none;
+    outline: none;
+    width: 5rem;
     transition: 100ms;
 }
 
-.selection:hover {
+.selection>img:hover {
     transform: scale(1.2);
-    text-shadow: grey 5px 10px 10px;
 }
 
 .results {
@@ -74,10 +79,10 @@ body {
 
 .result-selection {
     opacity: .5;
-    font-size: 2.2rem;
+    width: 2.2rem;
 }
 
 .result-selection.winner {
     opacity: 1;
-    font-size: 3rem;
+    width: 3rem;
 }
